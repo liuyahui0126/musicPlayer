@@ -34,6 +34,7 @@
         curTime = formateTime(curTime);
         $scope.find(".cur-time").html(curTime);
         renderPro(percent);
+    
     }
     function startPro(percentage){
         percentage ? lastPercent = percentage : lastPercent;
