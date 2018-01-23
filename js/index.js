@@ -84,4 +84,4 @@ function getData(url){
     })
 }
 
-getData('../mock/data.json');
+getData('https://liuyahui0126.github.io/musicPlayer/mock/data.json');
