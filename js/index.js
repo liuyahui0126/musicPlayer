@@ -8,6 +8,7 @@ var controlmanager;
 var audiomanager = new root.audioManager();
 var proccessor = root.proccessor;
 var playList = root.playList;
+var renderflag = true;
 
 
 function bindTouch(){
@@ -44,7 +45,7 @@ function bindClick(){
             proccessor.startPro();
         }
         proccessor.renderAllTime(song.duration);
-        proccessor.update(0);
+        proccessor.update(0,song.arrTime,song.arrLrc,renderflag);
     })
     $scope.find(".prev-btn").on("click",function(){
         index = controlmanager.prev();
@@ -84,5 +85,5 @@ function getData(url){
     })
 }
 
-getData('https://liuyahui0126.github.io/musicPlayer/mock/data.json');
-// getData('../mock/data.json');
+// getData('https://liuyahui0126.github.io/musicPlayer/mock/data.json');
+getData('../mock/data.json');
